@@ -1,18 +1,35 @@
 const { expect } = require('chai');
+const { EOL } = require('os');
 const { cmd } = require('./cmd');
 
 describe('Battleship', () => {
-  it('Welcomes you to the game @acceptance', async () => {
+  it('@acceptance: Displays a Game Board', async () => {
     const response = await cmd.execute(
-      './src/gameBoard.js',
+      './bin/game.js',
     );
+    const result = response.trim().split(EOL);
+    const expected = [
+      '- 1 2 3',
+      'A ~ ~ ~',
+      'B ~ ~ ~',
+      'C ~ ~ ~',
+    ];
 
-    //shows an empty board --> fail
-    //add board --> pass
-    //board.js unit test
-        
-    expect(response).to.equal(
-      'you ordered a pizza with:\n  - peppers\n  - gouda cheese',
+    expect((result)).to.deep.equal(expected);
+  });
+
+  xit('@acceptance: Displays a board with a ship', async () => {
+    const response = await cmd.execute(
+      './bin/game.js',
     );
+    const result = response.trim().split(EOL);
+    const expected = [
+      '- 1 2 3',
+      'A ~ ~ ~',
+      'B ~ ~ D',
+      'C ~ ~ D',
+    ];
+
+    expect((result)).to.deep.equal(expected);
   });
 });
