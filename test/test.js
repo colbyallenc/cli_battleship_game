@@ -16,7 +16,6 @@ describe.only('Board Test', () => {
   ].join("\n");
 
   const game = new Game(gameBoard, newShip);
-  // const ship = new Game(newShip);
 
   it('Should have a game with a board', () => {
     expect(game.getBoard()).to.equal(gameBoard);

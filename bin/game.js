@@ -1,7 +1,5 @@
 #! /usr/local/bin/node 
 //why doesnt env locate node?
-// const { Ship } = require('./ship.js');
-
 class Game {
   constructor(board, ship) {
     this.board = board;
