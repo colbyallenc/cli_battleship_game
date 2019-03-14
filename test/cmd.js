@@ -8,7 +8,7 @@ function createProcess(processPath, args = [], env = null) {
       {
         NODE_ENV: 'test',
       },
-      process.env, //
+      process.env, 
     ),
   });
 }
