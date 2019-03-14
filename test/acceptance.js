@@ -26,8 +26,8 @@ describe('Battleship', () => {
     const expected = [
       '- 1 2 3',
       'A ~ ~ ~',
-      'B ~ ~ D',
-      'C ~ ~ D',
+      'B ~ ~ ~',
+      'C ~ D D',
     ];
 
     expect((result)).to.deep.equal(expected);
