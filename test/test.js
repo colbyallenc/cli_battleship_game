@@ -8,9 +8,21 @@ describe.only('Board Test', () => {
     'B ~ ~ ~',
     'C ~ ~ ~',
   ].join("\n");
-  const game = new Game(gameBoard);
+  const newShip = [
+    '- 1 2 3',
+    'A ~ ~ ~',
+    'B ~ ~ ~',
+    'C ~ D D',
+  ].join("\n");
+
+  const game = new Game(gameBoard, newShip);
+  // const ship = new Game(newShip);
 
   it('Should have a game with a board', () => {
     expect(game.getBoard()).to.equal(gameBoard);
+  });
+
+  it('Should add a character to the board', () => {
+    expect(game.addShip()).to.equal(newShip);
   });
 });
