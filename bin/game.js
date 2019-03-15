@@ -1,7 +1,5 @@
 #! /usr/local/bin/node 
 //why doesnt env locate node?
-const { Ship } = require('./ship.js');
-
 class Game {
   constructor() {
     this.board = [
@@ -15,12 +13,24 @@ class Game {
   start() {
     return this.board;
   }
+
+  placeShip() {
+    this.board = [
+      '- 1 2 3',
+      'A ~ ~ ~',
+      'B ~ ~ D',
+      'C ~ ~ D',
+    ].join('\n');
+    return this.board;
+  }
 }
 
+module.exports = { Game };
+
 // const destroyer = new Ship('C2', 'C3');
-const game = new Game();
-console.log(game.start());
-// console.log(game);
+// const game = new Game();
+// console.log(game.start());
+
 //game.start? -->draws board and places things for us
 //then starts the game loop
 //board querys ship location -- > are you here? (unit test)

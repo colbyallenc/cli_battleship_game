@@ -2,8 +2,8 @@ const { expect } = require('chai');
 const { EOL } = require('os');
 const { cmd } = require('./cmd');
 
-describe('Battleship', () => {
-  it('@acceptance: Displays a Game Board', async () => {
+describe('Battleship Game Play', () => {
+  xit('@acceptance: Displays a Game Board', async () => {
     const response = await cmd.execute(
       './bin/game.js',
     );
@@ -18,7 +18,7 @@ describe('Battleship', () => {
     expect((result)).to.deep.equal(expected);
   });
 
-  xit('@acceptance: Displays a board with a ship', async () => {
+  xit('@acceptance: Places a ship on the Game Board', async () => {
     const response = await cmd.execute(
       './bin/game.js',
     );
