@@ -26,24 +26,24 @@ describe('Battleship Game Play', () => {
     ];
     expect((result)).to.deep.equal(expected);
   });
-  xit('Cpu generates board', () => {
+  xit('@acceptance: Cpu generates board', () => {
   });
-  xit('Display boards', () => {
+  xit('@acceptance: Display two boards', () => {
   });
-  xit('Take a shot at opponents board', () => {
+  xit('@acceptance: Take a shot at opponents board', () => {
   });
-  xit('Update board when opponent ship is hit', () => {
+  xit('@acceptance: Update board when opponent ship is hit', () => {
   });
-  xit('Opponent takes a shot at player board', () => {
+  xit('@acceptance: Opponent takes a shot at player board', () => {
 
   });
-  xit('Display board when player board is hit', () => {
+  xit('@acceptance: Display board when player board is hit', () => {
 
   });
-  xit('If length of board is hit, sink ship', () => {
+  xit('@acceptance: If length of board is hit, sink ship', () => {
 
   });
-  xit('If all of the boats are sunk, win game', () => {
+  xit('@acceptance: If all of the boats are sunk, win game', () => {
 
   });
 });
