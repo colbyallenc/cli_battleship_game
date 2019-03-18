@@ -8,6 +8,7 @@ class Game {
       'B ~ ~ ~',
       'C ~ ~ ~',
     ].join('\n');
+    this.shipPosition = [];
   }
 
   start() {
@@ -18,10 +19,20 @@ class Game {
     this.board = [
       '- 1 2 3',
       'A ~ ~ ~',
-      'B ~ ~ D',
-      'C ~ ~ D',
+      'B ~ ~ ~',
+      'C ~ D D',
     ].join('\n');
     return this.board;
+  }
+
+  queryBoard() {
+    this.placeShip();
+    for (let i = 0; i < this.board.length; i++) {
+      if (this.board[i] === 'D') {
+        this.shipPosition.push(i);
+      }
+    }
+    return this.shipPosition;
   }
 }
 
@@ -31,8 +42,7 @@ module.exports = { Game };
 // const game = new Game();
 // console.log(game.start());
 
-//game.start? -->draws board and places things for us
-//then starts the game loop
+
 //board querys ship location -- > are you here? (unit test)
 // if (here) draw D
 // else continue looping

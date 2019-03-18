@@ -2,12 +2,10 @@ const { expect } = require('chai');
 const { Game } = require('../bin/game.js');
 
 describe('Battleship Board', () => {
-  let game 
-  
+  let game;
   beforeEach(() => {
     game = new Game();
   });
-      
   it('Displays a Board on Game Start', () => {
     const expected = [
       '- 1 2 3',
@@ -21,12 +19,13 @@ describe('Battleship Board', () => {
     const placeShip = [
       '- 1 2 3',
       'A ~ ~ ~',
-      'B ~ ~ D',
-      'C ~ ~ D',
+      'B ~ ~ ~',
+      'C ~ D D',
     ].join('\n');
     expect((game.placeShip())).to.equal(placeShip);
   });
-  it('Query board for position', () => {
-    expect(game.)
-  })
+
+  it('Queries board for position of ship', () => {
+    expect((game.queryBoard('D'))).to.deep.equal([28, 30]);
+  });
 });
