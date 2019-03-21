@@ -26,9 +26,9 @@ describe('Battleship Game Play', () => {
     ];
     expect((result)).to.deep.equal(expected);
   });
-  xit('@acceptance: Cpu generates board', () => {
+  xit('@acceptance: Cpu generates board with ships', () => {
   });
-  xit('@acceptance: Display two boards', () => {
+  xit('@acceptance: Display both boards', () => {
   });
   xit('@acceptance: Take a shot at opponents board', () => {
   });
