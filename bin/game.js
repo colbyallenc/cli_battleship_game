@@ -16,11 +16,11 @@ class Game {
   }
 
   placeShip() {
-    this.board = [
+    [
       '- 1 2 3',
-      'A ~ ~ ~',
-      'B ~ ~ ~',
-      'C ~ D D',
+      `A ${getShipAt('A', 1)} ${getShipAt('A', 2)} ${getShipAt('A', 3)}`,
+      `B ${getShipAt('B', 1)} ${getShipAt('B', 2)} ${getShipAt('B', 3)}`,
+      `C ${getShipAt('C', 1)} ${getShipAt('C', 2)} ${getShipAt('C', 3)}`,
     ].join('\n');
     return this.board;
   }
