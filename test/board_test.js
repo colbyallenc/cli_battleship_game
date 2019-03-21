@@ -6,7 +6,7 @@ describe('Battleship Board', () => {
   beforeEach(() => {
     game = new Game();
   });
-  it('Displays a Board on Game Start', () => {
+  it('Displays a Board', () => {
     const expected = [
       '- 1 2 3',
       'A ~ ~ ~',
@@ -15,7 +15,7 @@ describe('Battleship Board', () => {
     ].join('\n');
     expect((game.start())).to.deep.equal(expected);
   });
-  it('Displays Ship on Game Board', () => {
+  it('Places Ship on board', () => {
     const placeShip = [
       '- 1 2 3',
       'A ~ ~ ~',
@@ -25,7 +25,36 @@ describe('Battleship Board', () => {
     expect((game.placeShip())).to.equal(placeShip);
   });
 
-  it('Queries board for position of ship', () => {
-    expect((game.queryBoard('D'))).to.deep.equal([28, 30]);
-  });
+  Describe('Attacks to Opponent', ()=> {
+    xit('Displays when Player Attacks Opponent', () => {
+      expect(());
+    });
+    xit('Displays when Player Hits Opponent Ship', () => {
+      expect(());
+    });
+    xit('Displays when Player has Sunken Opponent Ship', () => {
+      expect(());
+    });
+    xit('Displays when Player Strikes Opponent Ship', () => {
+      expect(());
+    });
+    xit('Displays when Player Sinks Opponent Ship', () => {
+      expect(());
+    });
+  })
+  
+  Describe('Attacks to Player', () => {
+    xit('Displays when Players Ship is Hit', () => {
+      expect(());
+    });
+    xit('Displays when Player has Sunken Opponent Ship', () => {
+      expect(());
+    });
+    xit('Displays when Player Strikes Opponent Ship', () => {
+      expect(());
+    });
+    xit('Displays when Player Sinks Opponent Ship', () => {
+      expect(());
+    });  
+  })
 });
