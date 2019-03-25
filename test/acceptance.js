@@ -13,7 +13,7 @@ describe('Battleship Game Play', () => {
       'C ~ ~ ~',
     ];
     expect((result)).to.deep.equal(expected);
-  });
+});
 
   xit('@acceptance: Places a ship on the Game Board', async () => {
     const response = await cmd.execute('./bin/game.js');

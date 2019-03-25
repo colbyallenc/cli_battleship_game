@@ -25,11 +25,11 @@ describe('Battleship Board', () => {
     expect((game.placeShip())).to.equal(placeShip);
   });
   Describe('Attacks to Opponent', ()=> {
-      //instead of being focused on diplay, talk about board actions
-      //board holds ships
-      //board registers hits
-      //we should see assertions on data structures not outputs
-      //component level- i wanna see collaborators working together
+  // instead of being focused on display, talk about board actions
+  // board holds ships
+  // board registers hits
+  // we should see assertions on data structures not outputs
+  // component level- i wanna see collaborators working together
     xit('Displays when Player Attacks Opponent', () => {
       expect();
     });
